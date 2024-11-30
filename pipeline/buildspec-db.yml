@@ -7,6 +7,7 @@ phases:
       - curl -fsSL https://rpm.nodesource.com/setup_21.x | sudo bash -
       - sudo yum install -y nodejs
       - npm install --loglevel=error
+      - codebuild-breakpoint
   build:
     commands:
       - echo Running Migrate db
