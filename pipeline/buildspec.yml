@@ -25,6 +25,7 @@ phases:
       - printf '[{"name":"bia","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - echo Running Migrate DB command
       - npm install --loglevel=error
+      - npx sequelize db:create
       - npx sequelize db:migrate
 artifacts:
   files: imagedefinitions.json
