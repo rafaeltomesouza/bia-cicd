@@ -9,7 +9,7 @@ RUN npm install --loglevel=error
 
 COPY . .
 
-RUN REACT_APP_API_URL=http://bia-alb-v1-1914669828.us-east-1.elb.amazonaws.com SKIP_PREFLIGHT_CHECK=true npm run build --prefix client
+RUN REACT_APP_API_URL=https://formacao.rafaeltomesouza.com.br SKIP_PREFLIGHT_CHECK=true npm run build --prefix client
 
 RUN mv client/build build
 
